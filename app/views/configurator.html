@@ -1,0 +1,5 @@
+<table>
+  <tr ng-repeat="ligne in configuration track by $index">
+    <td ng-class="tdCssClass(colonne)" ng-repeat=" colonne in ligne track by $index" ng-click="clickCellule($parent.$index, $index)">{{colonne}}</td>
+  </tr>
+</table>
