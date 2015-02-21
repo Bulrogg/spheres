@@ -46,7 +46,7 @@
 
     // Setup camera
     var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 10, BABYLON.Vector3.Zero(), scene);
-    camera.setPosition(new BABYLON.Vector3(-20, 20, 0));
+    camera.setPosition(new BABYLON.Vector3(20, 5, 5));
     camera.attachControl(canvas, true);
 
     // Lights
@@ -56,9 +56,9 @@
     var light3 = new BABYLON.DirectionalLight("Dir0", new BABYLON.Vector3(1, -1, 0), scene);
 
     // Creating light sphere
-    var lightSphere0 = BABYLON.Mesh.CreateSphere("Sphere0", 16, 0.5, scene);
-    var lightSphere1 = BABYLON.Mesh.CreateSphere("Sphere1", 16, 0.5, scene);
-    var lightSphere2 = BABYLON.Mesh.CreateSphere("Sphere2", 16, 0.5, scene);
+    var lightSphere0 = BABYLON.Mesh.CreateSphere("Sphere0", 1, 0.05, scene);
+    var lightSphere1 = BABYLON.Mesh.CreateSphere("Sphere1", 1, 0.05, scene);
+    var lightSphere2 = BABYLON.Mesh.CreateSphere("Sphere2", 1, 0.05, scene);
 
     lightSphere0.material = new BABYLON.StandardMaterial("red", scene);
     lightSphere0.material.diffuseColor = new BABYLON.Color3(0, 0, 0);
@@ -106,9 +106,9 @@
     // Animations
     var alpha = 0;
     scene.beforeRender = function () {
-      light0.position = new BABYLON.Vector3(10 * Math.sin(alpha), 0, 10 * Math.cos(alpha));
-      light1.position = new BABYLON.Vector3(10 * Math.sin(alpha), 0, -10 * Math.cos(alpha));
-      light2.position = new BABYLON.Vector3(10 * Math.cos(alpha), 0, 10 * Math.sin(alpha));
+      light0.position = new BABYLON.Vector3(10 * Math.sin(alpha), 0, 25 * Math.cos(alpha));
+      light1.position = new BABYLON.Vector3(10 * Math.sin(alpha), 0, -25 * Math.cos(alpha));
+      light2.position = new BABYLON.Vector3(10 * Math.cos(alpha), 0, 25 * Math.sin(alpha));
 
       lightSphere0.position = light0.position;
       lightSphere1.position = light1.position;
