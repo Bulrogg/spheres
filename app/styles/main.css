@@ -1,0 +1,29 @@
+body {
+  background-color: #808080;
+}
+
+td {
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: 1px solid #808080;
+}
+.td0 {
+  background-color: #ffffff;
+}
+
+.td1 {
+  background-color: #808080;
+}
+
+.go-to-the-scene {
+  background-color: #202020;
+  color: #ffffff;
+  text-align: center;
+  height: 40px;
+  font-weight: bold;
+  padding-top: 5px;
+  font-size: 20px;
+}
+
